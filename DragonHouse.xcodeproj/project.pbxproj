@@ -10,11 +10,37 @@
 		E321D6571CC107DE008D4D0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D6561CC107DE008D4D0D /* main.m */; };
 		E321D65A1CC107DE008D4D0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D6591CC107DE008D4D0D /* AppDelegate.m */; };
 		E321D65D1CC107DE008D4D0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D65C1CC107DE008D4D0D /* ViewController.m */; };
-		E321D6601CC107DE008D4D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321D65E1CC107DE008D4D0D /* Main.storyboard */; };
+		E321D6601CC107DE008D4D0D /* MainStoryboard_iPhone6Plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321D65E1CC107DE008D4D0D /* MainStoryboard_iPhone6Plus.storyboard */; };
 		E321D6621CC107DE008D4D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E321D6611CC107DE008D4D0D /* Assets.xcassets */; };
-		E321D6651CC107DE008D4D0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321D6631CC107DE008D4D0D /* LaunchScreen.storyboard */; };
 		E321D6701CC107DE008D4D0D /* DragonHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D66F1CC107DE008D4D0D /* DragonHouseTests.m */; };
 		E321D67B1CC107DE008D4D0D /* DragonHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D67A1CC107DE008D4D0D /* DragonHouseUITests.m */; };
+		E321D9801CC11D09008D4D0D /* MainStoryboard_iPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321D97F1CC11D09008D4D0D /* MainStoryboard_iPhone5.storyboard */; };
+		E321D9821CC11D1A008D4D0D /* MainStoryboard_iPhone6.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321D9811CC11D1A008D4D0D /* MainStoryboard_iPhone6.storyboard */; };
+		E321D9841CC11D2C008D4D0D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321D9831CC11D2C008D4D0D /* MainStoryboard_iPad.storyboard */; };
+		E321D9861CC131F3008D4D0D /* dragon_house_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9851CC131F3008D4D0D /* dragon_house_logo.png */; };
+		E321D98C1CC132ED008D4D0D /* SKSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D98A1CC132ED008D4D0D /* SKSplashView.m */; };
+		E321D9A51CC145AE008D4D0D /* win_1.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9951CC145AE008D4D0D /* win_1.png */; };
+		E321D9A61CC145AE008D4D0D /* win_2.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9961CC145AE008D4D0D /* win_2.png */; };
+		E321D9A71CC145AE008D4D0D /* win_3.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9971CC145AE008D4D0D /* win_3.png */; };
+		E321D9A81CC145AE008D4D0D /* win_4.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9981CC145AE008D4D0D /* win_4.png */; };
+		E321D9A91CC145AE008D4D0D /* win_5.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9991CC145AE008D4D0D /* win_5.png */; };
+		E321D9AA1CC145AE008D4D0D /* win_6.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D99A1CC145AE008D4D0D /* win_6.png */; };
+		E321D9AB1CC145AE008D4D0D /* win_7.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D99B1CC145AE008D4D0D /* win_7.png */; };
+		E321D9AC1CC145AE008D4D0D /* win_8.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D99C1CC145AE008D4D0D /* win_8.png */; };
+		E321D9AD1CC145AE008D4D0D /* win_9.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D99D1CC145AE008D4D0D /* win_9.png */; };
+		E321D9AE1CC145AE008D4D0D /* win_10.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D99E1CC145AE008D4D0D /* win_10.png */; };
+		E321D9AF1CC145AE008D4D0D /* win_11.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D99F1CC145AE008D4D0D /* win_11.png */; };
+		E321D9B01CC145AE008D4D0D /* win_12.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9A01CC145AE008D4D0D /* win_12.png */; };
+		E321D9B11CC145AE008D4D0D /* win_13.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9A11CC145AE008D4D0D /* win_13.png */; };
+		E321D9B21CC145AE008D4D0D /* win_14.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9A21CC145AE008D4D0D /* win_14.png */; };
+		E321D9B31CC145AE008D4D0D /* win_15.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9A31CC145AE008D4D0D /* win_15.png */; };
+		E321D9B41CC145AE008D4D0D /* win_16.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9A41CC145AE008D4D0D /* win_16.png */; };
+		E3A2DCFC1CC8593800BBC283 /* img_reg_facebook_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A2DCF91CC8593800BBC283 /* img_reg_facebook_button.png */; };
+		E3A2DCFD1CC8593800BBC283 /* img_reg_kakao_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A2DCFA1CC8593800BBC283 /* img_reg_kakao_button.png */; };
+		E3A2DCFE1CC8593800BBC283 /* img_reg_naver_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A2DCFB1CC8593800BBC283 /* img_reg_naver_button.png */; };
+		E3A2DD011CC8597B00BBC283 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A2DD001CC8597B00BBC283 /* LoginViewController.m */; };
+		E3A2DD031CC85CB000BBC283 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A2DD021CC85CB000BBC283 /* FacebookSDK.framework */; };
+		E3F8A75A1CC28CA800AFFB62 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F8A7591CC28CA800AFFB62 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +67,8 @@
 		E321D6591CC107DE008D4D0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E321D65B1CC107DE008D4D0D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E321D65C1CC107DE008D4D0D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E321D65F1CC107DE008D4D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E321D65F1CC107DE008D4D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone6Plus.storyboard; sourceTree = "<group>"; };
 		E321D6611CC107DE008D4D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E321D6641CC107DE008D4D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E321D6661CC107DE008D4D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E321D66B1CC107DE008D4D0D /* DragonHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321D66F1CC107DE008D4D0D /* DragonHouseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonHouseTests.m; sourceTree = "<group>"; };
@@ -51,6 +76,37 @@
 		E321D6761CC107DE008D4D0D /* DragonHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321D67A1CC107DE008D4D0D /* DragonHouseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonHouseUITests.m; sourceTree = "<group>"; };
 		E321D67C1CC107DE008D4D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E321D6891CC119BB008D4D0D /* DragonHouseViewList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragonHouseViewList.h; sourceTree = "<group>"; };
+		E321D97F1CC11D09008D4D0D /* MainStoryboard_iPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone5.storyboard; sourceTree = "<group>"; };
+		E321D9811CC11D1A008D4D0D /* MainStoryboard_iPhone6.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone6.storyboard; sourceTree = "<group>"; };
+		E321D9831CC11D2C008D4D0D /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		E321D9851CC131F3008D4D0D /* dragon_house_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon_house_logo.png; sourceTree = "<group>"; };
+		E321D9891CC132ED008D4D0D /* SKSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSplashView.h; sourceTree = "<group>"; };
+		E321D98A1CC132ED008D4D0D /* SKSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSplashView.m; sourceTree = "<group>"; };
+		E321D9951CC145AE008D4D0D /* win_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_1.png; sourceTree = "<group>"; };
+		E321D9961CC145AE008D4D0D /* win_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_2.png; sourceTree = "<group>"; };
+		E321D9971CC145AE008D4D0D /* win_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_3.png; sourceTree = "<group>"; };
+		E321D9981CC145AE008D4D0D /* win_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_4.png; sourceTree = "<group>"; };
+		E321D9991CC145AE008D4D0D /* win_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_5.png; sourceTree = "<group>"; };
+		E321D99A1CC145AE008D4D0D /* win_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_6.png; sourceTree = "<group>"; };
+		E321D99B1CC145AE008D4D0D /* win_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_7.png; sourceTree = "<group>"; };
+		E321D99C1CC145AE008D4D0D /* win_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_8.png; sourceTree = "<group>"; };
+		E321D99D1CC145AE008D4D0D /* win_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_9.png; sourceTree = "<group>"; };
+		E321D99E1CC145AE008D4D0D /* win_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_10.png; sourceTree = "<group>"; };
+		E321D99F1CC145AE008D4D0D /* win_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_11.png; sourceTree = "<group>"; };
+		E321D9A01CC145AE008D4D0D /* win_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_12.png; sourceTree = "<group>"; };
+		E321D9A11CC145AE008D4D0D /* win_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_13.png; sourceTree = "<group>"; };
+		E321D9A21CC145AE008D4D0D /* win_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_14.png; sourceTree = "<group>"; };
+		E321D9A31CC145AE008D4D0D /* win_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_15.png; sourceTree = "<group>"; };
+		E321D9A41CC145AE008D4D0D /* win_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_16.png; sourceTree = "<group>"; };
+		E3A2DCF91CC8593800BBC283 /* img_reg_facebook_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_reg_facebook_button.png; sourceTree = "<group>"; };
+		E3A2DCFA1CC8593800BBC283 /* img_reg_kakao_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_reg_kakao_button.png; sourceTree = "<group>"; };
+		E3A2DCFB1CC8593800BBC283 /* img_reg_naver_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_reg_naver_button.png; sourceTree = "<group>"; };
+		E3A2DCFF1CC8597B00BBC283 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E3A2DD001CC8597B00BBC283 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E3A2DD021CC85CB000BBC283 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		E3F8A7581CC28CA800AFFB62 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E3F8A7591CC28CA800AFFB62 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A2DD031CC85CB000BBC283 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +138,7 @@
 		E321D6491CC107DE008D4D0D = {
 			isa = PBXGroup;
 			children = (
+				E3A2DD021CC85CB000BBC283 /* FacebookSDK.framework */,
 				E321D6541CC107DE008D4D0D /* DragonHouse */,
 				E321D66E1CC107DE008D4D0D /* DragonHouseTests */,
 				E321D6791CC107DE008D4D0D /* DragonHouseUITests */,
@@ -101,15 +159,21 @@
 		E321D6541CC107DE008D4D0D /* DragonHouse */ = {
 			isa = PBXGroup;
 			children = (
+				E3A2DCF81CC8586B00BBC283 /* Login */,
+				E321D98D1CC13308008D4D0D /* Splash */,
+				E321D6881CC1114F008D4D0D /* Resources */,
 				E321D6581CC107DE008D4D0D /* AppDelegate.h */,
 				E321D6591CC107DE008D4D0D /* AppDelegate.m */,
 				E321D65B1CC107DE008D4D0D /* ViewController.h */,
 				E321D65C1CC107DE008D4D0D /* ViewController.m */,
-				E321D65E1CC107DE008D4D0D /* Main.storyboard */,
 				E321D6611CC107DE008D4D0D /* Assets.xcassets */,
-				E321D6631CC107DE008D4D0D /* LaunchScreen.storyboard */,
 				E321D6661CC107DE008D4D0D /* Info.plist */,
 				E321D6551CC107DE008D4D0D /* Supporting Files */,
+				E321D6891CC119BB008D4D0D /* DragonHouseViewList.h */,
+				E3F8A7581CC28CA800AFFB62 /* MainViewController.h */,
+				E3F8A7591CC28CA800AFFB62 /* MainViewController.m */,
+				E3A2DCFF1CC8597B00BBC283 /* LoginViewController.h */,
+				E3A2DD001CC8597B00BBC283 /* LoginViewController.m */,
 			);
 			path = DragonHouse;
 			sourceTree = "<group>";
@@ -138,6 +202,61 @@
 				E321D67C1CC107DE008D4D0D /* Info.plist */,
 			);
 			path = DragonHouseUITests;
+			sourceTree = "<group>";
+		};
+		E321D6881CC1114F008D4D0D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E321D9941CC1459F008D4D0D /* images */,
+				E321D9851CC131F3008D4D0D /* dragon_house_logo.png */,
+				E321D65E1CC107DE008D4D0D /* MainStoryboard_iPhone6Plus.storyboard */,
+				E321D97F1CC11D09008D4D0D /* MainStoryboard_iPhone5.storyboard */,
+				E321D9811CC11D1A008D4D0D /* MainStoryboard_iPhone6.storyboard */,
+				E321D9831CC11D2C008D4D0D /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E321D98D1CC13308008D4D0D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				E321D9891CC132ED008D4D0D /* SKSplashView.h */,
+				E321D98A1CC132ED008D4D0D /* SKSplashView.m */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		E321D9941CC1459F008D4D0D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E3A2DCF91CC8593800BBC283 /* img_reg_facebook_button.png */,
+				E3A2DCFA1CC8593800BBC283 /* img_reg_kakao_button.png */,
+				E3A2DCFB1CC8593800BBC283 /* img_reg_naver_button.png */,
+				E321D9951CC145AE008D4D0D /* win_1.png */,
+				E321D9961CC145AE008D4D0D /* win_2.png */,
+				E321D9971CC145AE008D4D0D /* win_3.png */,
+				E321D9981CC145AE008D4D0D /* win_4.png */,
+				E321D9991CC145AE008D4D0D /* win_5.png */,
+				E321D99A1CC145AE008D4D0D /* win_6.png */,
+				E321D99B1CC145AE008D4D0D /* win_7.png */,
+				E321D99C1CC145AE008D4D0D /* win_8.png */,
+				E321D99D1CC145AE008D4D0D /* win_9.png */,
+				E321D99E1CC145AE008D4D0D /* win_10.png */,
+				E321D99F1CC145AE008D4D0D /* win_11.png */,
+				E321D9A01CC145AE008D4D0D /* win_12.png */,
+				E321D9A11CC145AE008D4D0D /* win_13.png */,
+				E321D9A21CC145AE008D4D0D /* win_14.png */,
+				E321D9A31CC145AE008D4D0D /* win_15.png */,
+				E321D9A41CC145AE008D4D0D /* win_16.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		E3A2DCF81CC8586B00BBC283 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +362,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E321D6651CC107DE008D4D0D /* LaunchScreen.storyboard in Resources */,
+				E321D9AB1CC145AE008D4D0D /* win_7.png in Resources */,
+				E321D9861CC131F3008D4D0D /* dragon_house_logo.png in Resources */,
+				E3A2DCFE1CC8593800BBC283 /* img_reg_naver_button.png in Resources */,
+				E321D9A81CC145AE008D4D0D /* win_4.png in Resources */,
+				E321D9B11CC145AE008D4D0D /* win_13.png in Resources */,
+				E3A2DCFC1CC8593800BBC283 /* img_reg_facebook_button.png in Resources */,
+				E321D9AD1CC145AE008D4D0D /* win_9.png in Resources */,
+				E321D9AC1CC145AE008D4D0D /* win_8.png in Resources */,
 				E321D6621CC107DE008D4D0D /* Assets.xcassets in Resources */,
-				E321D6601CC107DE008D4D0D /* Main.storyboard in Resources */,
+				E321D9A71CC145AE008D4D0D /* win_3.png in Resources */,
+				E321D9801CC11D09008D4D0D /* MainStoryboard_iPhone5.storyboard in Resources */,
+				E321D9821CC11D1A008D4D0D /* MainStoryboard_iPhone6.storyboard in Resources */,
+				E321D9A91CC145AE008D4D0D /* win_5.png in Resources */,
+				E321D9AF1CC145AE008D4D0D /* win_11.png in Resources */,
+				E321D9B01CC145AE008D4D0D /* win_12.png in Resources */,
+				E3A2DCFD1CC8593800BBC283 /* img_reg_kakao_button.png in Resources */,
+				E321D9AE1CC145AE008D4D0D /* win_10.png in Resources */,
+				E321D9B31CC145AE008D4D0D /* win_15.png in Resources */,
+				E321D9A61CC145AE008D4D0D /* win_2.png in Resources */,
+				E321D6601CC107DE008D4D0D /* MainStoryboard_iPhone6Plus.storyboard in Resources */,
+				E321D9A51CC145AE008D4D0D /* win_1.png in Resources */,
+				E321D9AA1CC145AE008D4D0D /* win_6.png in Resources */,
+				E321D9B41CC145AE008D4D0D /* win_16.png in Resources */,
+				E321D9841CC11D2C008D4D0D /* MainStoryboard_iPad.storyboard in Resources */,
+				E321D9B21CC145AE008D4D0D /* win_14.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E321D98C1CC132ED008D4D0D /* SKSplashView.m in Sources */,
+				E3F8A75A1CC28CA800AFFB62 /* MainViewController.m in Sources */,
+				E3A2DD011CC8597B00BBC283 /* LoginViewController.m in Sources */,
 				E321D65D1CC107DE008D4D0D /* ViewController.m in Sources */,
 				E321D65A1CC107DE008D4D0D /* AppDelegate.m in Sources */,
 				E321D6571CC107DE008D4D0D /* main.m in Sources */,
@@ -308,20 +452,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E321D65E1CC107DE008D4D0D /* Main.storyboard */ = {
+		E321D65E1CC107DE008D4D0D /* MainStoryboard_iPhone6Plus.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E321D65F1CC107DE008D4D0D /* Base */,
 			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E321D6631CC107DE008D4D0D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E321D6641CC107DE008D4D0D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			name = MainStoryboard_iPhone6Plus.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -411,6 +547,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "dragonhouse-Prefix.pch";
 				INFOPLIST_FILE = DragonHouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.a2big.DragonHouse;
@@ -422,6 +563,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "dragonhouse-Prefix.pch";
 				INFOPLIST_FILE = DragonHouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.a2big.DragonHouse;
@@ -496,6 +642,7 @@
 				E321D6811CC107DE008D4D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E321D6821CC107DE008D4D0D /* Build configuration list for PBXNativeTarget "DragonHouseTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +651,7 @@
 				E321D6841CC107DE008D4D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E321D6851CC107DE008D4D0D /* Build configuration list for PBXNativeTarget "DragonHouseUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +660,7 @@
 				E321D6871CC107DE008D4D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

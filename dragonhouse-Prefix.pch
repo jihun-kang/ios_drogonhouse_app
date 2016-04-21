@@ -1,0 +1,32 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+#import "DragonHouseViewList.h"
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+//iPhone 4/4S
+#define IS_3_5_INCH_DEVICE CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(320.0f, 480.0f)) || CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(480.0f, 320.0f))
+
+//iPhone 5/5C/5S
+#define IS_4_INCH_DEVICE CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(320.0f, 568.0f)) || CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(568.0f, 320.0f))
+
+//iPhone 6
+#define IS_4_7_INCH_DEVICE CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(375.0f, 667.0f)) || CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(667.0f, 375.0f))
+
+//iPhone 6 Plus
+#define IS_5_5_INCH_DEVICE CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(414.0f, 736.0f)) || CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(736.0f, 414.0f))
+
+
+
+#endif
