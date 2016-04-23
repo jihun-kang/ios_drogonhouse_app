@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController{
+    BOOL _doneSignup;
+    KOUser *_user;
+    KOTalkProfile *_profile;
+    
+}
+
+
 - (IBAction)doFaceBookLogin:(id)sender;
 - (IBAction)doKakaoLogin:(id)sender;
 - (IBAction)doNaverLogin:(id)sender;

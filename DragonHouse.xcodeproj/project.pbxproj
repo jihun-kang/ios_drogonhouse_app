@@ -40,6 +40,7 @@
 		E3A2DCFE1CC8593800BBC283 /* img_reg_naver_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A2DCFB1CC8593800BBC283 /* img_reg_naver_button.png */; };
 		E3A2DD011CC8597B00BBC283 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A2DD001CC8597B00BBC283 /* LoginViewController.m */; };
 		E3A2DD031CC85CB000BBC283 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A2DD021CC85CB000BBC283 /* FacebookSDK.framework */; };
+		E3A2DD051CC92DAD00BBC283 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A2DD041CC92DAD00BBC283 /* KakaoOpenSDK.framework */; };
 		E3F8A75A1CC28CA800AFFB62 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F8A7591CC28CA800AFFB62 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		E3A2DCFF1CC8597B00BBC283 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E3A2DD001CC8597B00BBC283 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E3A2DD021CC85CB000BBC283 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		E3A2DD041CC92DAD00BBC283 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		E3F8A7581CC28CA800AFFB62 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		E3F8A7591CC28CA800AFFB62 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A2DD031CC85CB000BBC283 /* FacebookSDK.framework in Frameworks */,
+				E3A2DD051CC92DAD00BBC283 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +141,7 @@
 		E321D6491CC107DE008D4D0D = {
 			isa = PBXGroup;
 			children = (
+				E3A2DD041CC92DAD00BBC283 /* KakaoOpenSDK.framework */,
 				E3A2DD021CC85CB000BBC283 /* FacebookSDK.framework */,
 				E321D6541CC107DE008D4D0D /* DragonHouse */,
 				E321D66E1CC107DE008D4D0D /* DragonHouseTests */,
@@ -172,8 +176,6 @@
 				E321D6891CC119BB008D4D0D /* DragonHouseViewList.h */,
 				E3F8A7581CC28CA800AFFB62 /* MainViewController.h */,
 				E3F8A7591CC28CA800AFFB62 /* MainViewController.m */,
-				E3A2DCFF1CC8597B00BBC283 /* LoginViewController.h */,
-				E3A2DD001CC8597B00BBC283 /* LoginViewController.m */,
 			);
 			path = DragonHouse;
 			sourceTree = "<group>";
@@ -255,6 +257,8 @@
 		E3A2DCF81CC8586B00BBC283 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E3A2DCFF1CC8597B00BBC283 /* LoginViewController.h */,
+				E3A2DD001CC8597B00BBC283 /* LoginViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -554,6 +558,7 @@
 				GCC_PREFIX_HEADER = "dragonhouse-Prefix.pch";
 				INFOPLIST_FILE = DragonHouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.a2big.DragonHouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -570,6 +575,7 @@
 				GCC_PREFIX_HEADER = "dragonhouse-Prefix.pch";
 				INFOPLIST_FILE = DragonHouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.a2big.DragonHouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

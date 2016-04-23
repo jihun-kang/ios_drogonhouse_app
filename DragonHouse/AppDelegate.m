@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
 
 @interface AppDelegate ()
 
@@ -124,7 +125,12 @@
 ////facebook login
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     
-    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    if ([KOSession isKakaoAccountLoginCallback:url]) {
+        return [KOSession handleOpenURL:url];
+    }
+    else{
+        return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    }
 }
 
 
@@ -150,5 +156,25 @@
 }
 
 
+////////////
+//Kakao
+///////////
+- (void)reloadRootViewController {
+    BOOL isOpened = [KOSession sharedSession].isOpen;
+    
+    if (!isOpened) {
+        /// [self.mainViewController popToRootViewControllerAnimated:YES];
+    }
+    
+    ///self.window.rootViewController = isOpened ? self.mainViewController : self.loginViewController;
+    ////[self.window makeKeyAndVisible];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if ([KOSession isKakaoAccountLoginCallback:url]) {
+        return [KOSession handleOpenURL:url];
+    }
+    return NO;
+}
 
 @end

@@ -36,7 +36,12 @@
     self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
     
-    
+    KOSession *session = [KOSession sharedSession];
+    if (session.isOpen) {
+        //로그아웃 처리
+        [session close];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,7 +83,36 @@
 
 - (IBAction)doKakaoLogin:(id)sender {
     NSLog(@"doKakaoLogin..");
+    KOSession *session = [KOSession sharedSession];
+    if (session.isOpen) {
+        //로그아웃 처리
+        [session close];
+    }
 
+    
+    session.presentingViewController = self;
+    [session openWithCompletionHandler:^(NSError *error) {
+        session.presentingViewController = nil;
+        NSLog(@"login3333");
+        
+        if (!session.isOpen) {
+            NSLog(@"Error");
+            NSLog(@"You are not logged in.");
+            [self requestMe:YES];
+
+        }
+        else{
+            NSLog(@"OK");
+            NSLog(@"You are logged in.");
+            [self test];
+            [self requestMe:YES];
+
+        }
+        
+    }];
+
+    
+    
 }
 
 - (IBAction)doNaverLogin:(id)sender {
@@ -175,6 +209,49 @@
     }
 }
 
+///////
+-(void)test{
+    [KOSessionTask talkProfileTaskWithCompletionHandler:^(id result, NSError *error) {
+        if (error) {
+            NSLog(@">>>>>111 %@",[error description]);
+        } else {
+            _profile = result;
+            NSLog(@">>>>>nickName %@", _profile.nickName);
+            NSLog(@">>>>>image %@", _profile.profileImageURL);
+            
+           /*
+            NSURL *pictureURL = [NSURL URLWithString:_profile.profileImageURL];
+            
+            self.profileImage.image =[UIImage imageWithData:[NSData dataWithContentsOfURL:pictureURL]];
+            self.lblFullname.text = _profile.nickName;
+            */
+            
+        }
+    }];
+}
 
+//다음은 사용자 정보를 얻어오는 예제 코드입니다. 사용자 본인의 아이디와 부가 정보는 KOUser 객체를 통해 반환됩니다.
+- (void)requestMe:(BOOL)displayResult {
+    [KOSessionTask meTaskWithCompletionHandler:^(id result, NSError *error) {
+        if (error) {
+            if (error.code == KOErrorCancelled) {
+                NSLog(@"requestMe>>>>>%@",@"에러, 다시 로그인해주세요!");
+                
+            } else {
+                NSLog(@"requestMe>>>>>%@",[NSString stringWithFormat:@"에러! code=%d, Signup 을 누르세요", (int) error.code]);
+                
+            }
+            _doneSignup = YES;
+        } else {
+            if (displayResult) {
+                NSLog(@"requestMe>>>>>%@",[result description]);
+            }else{
+                NSLog(@"requestMe>>>>>%@",@"22222");
+            }
+            _doneSignup = NO;
+            _user = result;
+        }
+    }];
+}
 
 @end
