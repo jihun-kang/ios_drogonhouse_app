@@ -10,7 +10,12 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
+///
+#import "MainViewController.h"
+#import "NaverThirdPartyConstantsForApp.h"
+#import "NLoginThirdPartyOAuth20InAppBrowserViewController.h"
 
+////
 @interface LoginViewController ()
 @property (nonatomic, strong) AppDelegate *appDelegate;
 -(void)handleFBSessionStateChangeWithNotification:(NSNotification *)notification;
@@ -24,7 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    _thirdPartyLoginConn = [NaverThirdPartyLoginConnection getSharedInstance];
+    _thirdPartyLoginConn.delegate = self;
+
     
     // Observe for the custom notification regarding the session state change.
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -73,8 +80,9 @@
         NSLog(@"doFaceBookLogin..22222");
 
         // Close an existing session.
-        ///[[FBSession activeSession] closeAndClearTokenInformation];
-        
+        [[FBSession activeSession] closeAndClearTokenInformation];
+        [self.appDelegate openActiveSessionWithPermissions:@[@"public_profile", @"email"] allowLoginUI:YES];
+
     }
 
     
@@ -117,6 +125,16 @@
 
 - (IBAction)doNaverLogin:(id)sender {
     NSLog(@"doNaverLogin..");
+    if(_doneSignup == true){
+        NSLog(@"OK");
+        
+        [self requestDeleteToken];
+        
+    }
+    else{
+        NSLog(@">>>>>LOGOUT");
+        [self requestThirdpartyLogin];
+    }
 
 }
 
@@ -165,7 +183,8 @@
                                           // Set the e-mail address.
                                           NSLog(@"%@", [result objectForKey:@"email"]);
 
-                                          
+                                          //
+                                          [self showMainCaheView];
                                           
                                          /*
                                           // Get the user's profile picture.
@@ -253,5 +272,207 @@
         }
     }];
 }
+
+
+////
+-(void)showMainCaheView{
+    NSLog(@"showLoginCaheView");
+    
+    MainViewController *myS = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    [self.navigationController pushViewController:myS animated:NO];
+}
+
+
+- (void)requestThirdpartyLogin
+{
+    // NaverThirdPartyLoginConnection의 인스턴스에 서비스앱의 url scheme와 consumer key, consumer secret, 그리고 appName을 파라미터로 전달하여 3rd party OAuth 인증을 요청한다.
+    NSLog(@"requestThirdpartyLogin...%@ %@ %@ %@",kConsumerKey, kConsumerSecret, kServiceAppName, kServiceAppUrlScheme);
+    
+    NaverThirdPartyLoginConnection *tlogin = [NaverThirdPartyLoginConnection getSharedInstance];
+    [tlogin setConsumerKey:kConsumerKey];
+    [tlogin setConsumerSecret:kConsumerSecret];
+    [tlogin setAppName:kServiceAppName];
+    [tlogin setServiceUrlScheme:kServiceAppUrlScheme];
+    [tlogin requestThirdPartyLogin];
+}
+
+- (void)requestAccessTokenWithRefreshToken
+{
+    NaverThirdPartyLoginConnection *tlogin = [NaverThirdPartyLoginConnection getSharedInstance];
+    [tlogin setConsumerKey:kConsumerKey];
+    [tlogin setConsumerSecret:kConsumerSecret];
+    [tlogin requestAccessTokenWithRefreshToken];
+}
+
+- (void)resetToken
+{
+    [_thirdPartyLoginConn resetToken];
+}
+
+- (void)requestDeleteToken
+{
+    NaverThirdPartyLoginConnection *tlogin = [NaverThirdPartyLoginConnection getSharedInstance];
+    [tlogin requestDeleteToken];
+}
+
+
+- (void)didClickGetUserProfileBtn {
+    NSLog(@"didClickGetUserProfileBtn...");
+    
+    if (NO == [_thirdPartyLoginConn isValidAccessTokenExpireTimeNow]) {
+        ////[_mainView setResultLabelText:@"로그인 하세요."];
+        return;
+    }
+    
+    NSString *urlString = @"https://openapi.naver.com/v1/nid/getUserProfile.xml";  // 사용자 프로필 호출
+    
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    
+    NSString *authValue = [NSString stringWithFormat:@"Bearer %@", _thirdPartyLoginConn.accessToken];
+    
+    [urlRequest setValue:authValue forHTTPHeaderField:@"Authorization"];
+    
+    NSHTTPURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *receivedData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    NSString *decodingString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    
+    if (error) {
+        NSLog(@"Error happened - %@", [error description]);
+        /// [_mainView setResultLabelText:[error description]];
+    } else {
+        NSLog(@"recevied data - %@", decodingString);
+        //// [_mainView setResultLabelText:decodingString];
+        
+        NSXMLParser *xmlParser =  [[NSXMLParser alloc] initWithData:receivedData];
+        xmlParser.delegate = self;
+        if( [xmlParser parse]){
+            NSLog(@"The XML is Parsed.");
+        }
+        
+    }
+}
+-(void)parserDidStartDocument:(NSXMLParser *)parser{
+    NSLog(@"parserDidStartDocument");
+}
+-(void)parserDidEndDocument:(NSXMLParser *)parser{
+}
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
+    switch (aNode) {
+        case profile_image:
+            NSLog(@"profile_image>>%@",string);
+            profileURL = string;
+            break;
+            
+        case nickname:
+            NSLog(@"nickname>>%@",string);
+            nick = string;
+            break;
+    }
+    
+}
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
+    
+    if([elementName isEqualToString:@"profile_image"]) {
+        aNode = profile_image;
+    }
+    else if([elementName isEqualToString:@"nickname"]) {
+        aNode = nickname;
+    }
+    else{
+        aNode = invalidNode;
+    }
+}
+-(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
+    
+    // if([elementName isEqualToString:@"profile_image"]){
+    
+    // }
+}
+#pragma mark - SampleOAuthConnectionDelegate
+- (void) presentWebviewControllerWithRequest:(NSURLRequest *)urlRequest   {
+    // FormSheet모달위에 FullScreen모달이 뜰 떄 애니메이션이 이상하게 동작하여 애니메이션이 없도록 함
+    
+    NLoginThirdPartyOAuth20InAppBrowserViewController *inAppBrowserViewController = [[NLoginThirdPartyOAuth20InAppBrowserViewController alloc] initWithRequest:urlRequest];
+    inAppBrowserViewController.parentOrientation = (UIInterfaceOrientation)[[UIDevice currentDevice] orientation];
+    [self presentViewController:inAppBrowserViewController animated:NO completion:nil];
+}
+
+#pragma mark - OAuth20 deleagate
+
+- (void)oauth20ConnectionDidOpenInAppBrowserForOAuth:(NSURLRequest *)request {
+    NSLog(@"oauth20ConnectionDidOpenInAppBrowserForOAuth...");
+    
+    [self presentWebviewControllerWithRequest:request];
+}
+
+- (void)oauth20Connection:(NaverThirdPartyLoginConnection *)oauthConnection didFailWithError:(NSError *)error {
+    NSLog(@"%s=[%@]", __FUNCTION__, error);
+    //[_mainView setResultLabelText:[NSString stringWithFormat:@"%@", error]];
+    
+}
+
+- (void)oauth20ConnectionDidFinishRequestACTokenWithAuthCode {
+    // [_mainView setResultLabelText:[NSString stringWithFormat:@"OAuth Success!\n\nAccess Token - %@\n\nAccess Token Expire Date- %@\n\nRefresh Token - %@", _thirdPartyLoginConn.accessToken, _thirdPartyLoginConn.accessTokenExpireDate, _thirdPartyLoginConn.refreshToken]];
+    
+    NSLog(@"%s=[%@]", __FUNCTION__, [NSString stringWithFormat:@"OAuth Success!\n\nAccess Token - %@\n\nAccess Token Expire Date- %@\n\nRefresh Token - %@", _thirdPartyLoginConn.accessToken, _thirdPartyLoginConn.accessTokenExpireDate, _thirdPartyLoginConn.refreshToken]);
+    
+    
+  //  [self.activityindicator stopAnimating];
+ //   self.activityindicator.hidden = YES;
+ //   self.lblStatus.text = @"Logging you in...";
+    _doneSignup = YES;
+  //  [self.loginButton setTitle:@"Logout" forState:UIControlStateNormal];
+    
+    
+    [self didClickGetUserProfileBtn];
+    
+ //   NSLog(@"profile_image222>>%@",profileURL);
+  //  self.profileImage.hidden = false;
+  //  self.lblFullname.hidden = false;
+    
+   // NSURL *pURL = [NSURL URLWithString:profileURL];
+   // self.profileImage.image =[UIImage imageWithData:[NSData dataWithContentsOfURL:pURL]];
+   // self.lblFullname.text = nick;
+    
+    
+}
+
+- (void)oauth20ConnectionDidFinishRequestACTokenWithRefreshToken {
+    //    [_mainView setResultLabelText:[NSString stringWithFormat:@"Refresh Success!\n\nAccess Token - %@\n\nAccess sToken ExpireDate- %@", _thirdPartyLoginConn.accessToken, _thirdPartyLoginConn.accessTokenExpireDate ]];
+    
+    NSLog(@"%s=[%@]", __FUNCTION__, [NSString stringWithFormat:@"Refresh Success!\n\nAccess Token - %@\n\nAccess sToken ExpireDate- %@", _thirdPartyLoginConn.accessToken, _thirdPartyLoginConn.accessTokenExpireDate ]);
+    
+    
+    _doneSignup = YES;
+  //  self.lblStatus.text = @"Logging you in...";
+  //  [self.loginButton setTitle:@"Logout" forState:UIControlStateNormal];
+    // Stop the activity indicator from animating and hide the status label.
+  //  [self.activityindicator stopAnimating];
+    
+    [self didClickGetUserProfileBtn];
+    
+  //  NSLog(@"profile_image222>>%@",profileURL);
+  //  NSURL *pURL = [NSURL URLWithString:profileURL];
+   // self.profileImage.hidden = false;
+  //  self.lblFullname.hidden = false;
+   // self.profileImage.image =[UIImage imageWithData:[NSData //dataWithContentsOfURL:pURL]];
+  //  self.lblFullname.text = nick;
+    
+}
+- (void)oauth20ConnectionDidFinishDeleteToken {
+    ////[_mainView setResultLabelText:[NSString stringWithFormat:@"로그아웃 완료"]];
+    NSLog(@"%s=[%@]", __FUNCTION__, [NSString stringWithFormat:@"로그아웃 완료"]);
+    _doneSignup = NO;
+    
+   // self.activityindicator.hidden = YES;
+  //  [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+  //  self.lblStatus.hidden = NO;
+  //  self.lblStatus.text = @"You are not logged in.";
+  //  self.profileImage.hidden = true;
+  //  self.lblFullname.hidden = true;
+    
+}
+
 
 @end

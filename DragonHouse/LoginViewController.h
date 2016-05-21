@@ -8,12 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import "NaverThirdPartyLoginConnection.h"
 
-@interface LoginViewController : UIViewController{
+@interface LoginViewController : UIViewController<NaverThirdPartyLoginConnectionDelegate>{
     BOOL _doneSignup;
     KOUser *_user;
     KOTalkProfile *_profile;
     
+    NaverThirdPartyLoginConnection *_thirdPartyLoginConn;
+    BOOL                elementFoundPortFolio;
+    
+    
+    enum nodes {profile_image = 1, nickname = 2, invalidNode = -1};
+    enum nodes aNode;
+    
+    NSString *profileURL;
+    NSString *nick;
+
 }
 
 

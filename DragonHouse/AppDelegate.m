@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import "NaverThirdPartyConstantsForApp.h"
+#import "NaverThirdPartyLoginConnection.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Override point for customization after application launch.
+    NaverThirdPartyLoginConnection *thirdConn = [NaverThirdPartyLoginConnection getSharedInstance];
+    //    [thirdConn setOnlyPortraitSupportInIphone:YES];
     
+    [thirdConn setServiceUrlScheme:kServiceAppUrlScheme];
+    [thirdConn setConsumerKey:kConsumerKey];
+    [thirdConn setConsumerSecret:kConsumerSecret];
+    [thirdConn setAppName:kServiceAppName];
+
     
     UIStoryboard *storyboard = nil;
     UIViewController *initialViewController = nil;
@@ -125,12 +135,45 @@
 ////facebook login
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     
-    if ([KOSession isKakaoAccountLoginCallback:url]) {
-        return [KOSession handleOpenURL:url];
+
+    
+    
+
+    if ([url.scheme containsString:@"kakao"]) {
+        if ([KOSession isKakaoAccountLoginCallback:url]) {
+            return [KOSession handleOpenURL:url];
+        }
+        else{
+            return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+        }
+    } else {
+        return [self handleWithUrl:url];
     }
-    else{
-        return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+
+}
+
+- (BOOL)handleWithUrl:(NSURL *)url {
+    NSLog(@"url : %@", url);
+    NSLog(@"url scheme : %@", url.scheme);
+    NSLog(@"url scheme : %@", kServiceAppUrlScheme);
+    NSLog(@"result - %d", [url.scheme isEqualToString:kServiceAppUrlScheme]);
+    
+    if ([[url scheme] isEqualToString:kServiceAppUrlScheme]) {
+        if ([[url host] isEqualToString:kCheckResultPage]) {
+            
+            // 네이버앱으로부터 전달받은 url값을 NaverThirdPartyLoginConnection의 인스턴스에 전달
+            NaverThirdPartyLoginConnection *thirdConnection = [NaverThirdPartyLoginConnection getSharedInstance];
+            THIRDPARTYLOGIN_RECEIVE_TYPE resultType = [thirdConnection receiveAccessToken:url];
+            
+            if (SUCCESS == resultType) {
+                NSLog(@"Getting auth code from NaverApp success!");
+            } else {
+                // 앱에서 resultType에 따라 실패 처리한다.
+            }
+        }
+        return YES;
     }
+    return NO;
 }
 
 
