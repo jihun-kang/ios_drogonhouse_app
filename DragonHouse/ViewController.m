@@ -18,11 +18,15 @@
 @end
 
 @implementation ViewController
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"ViewController viewWillAppear");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    NSLog(@">>>>>ViewController");
+
     self.navigationController.navigationBarHidden = true;
     
     //This is to make the status bar (provider, network, clock etc.) color to white since the background is black

@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "AgreementView.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
@@ -25,9 +26,14 @@
 @end
 
 @implementation LoginViewController
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"LoginViewController viewWillAppear");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@">>>>>LoginViewController");
+
     // Do any additional setup after loading the view.
     _thirdPartyLoginConn = [NaverThirdPartyLoginConnection getSharedInstance];
     _thirdPartyLoginConn.delegate = self;
@@ -135,6 +141,10 @@
         NSLog(@">>>>>LOGOUT");
         [self requestThirdpartyLogin];
     }
+    
+    
+    //[self showAgreementView];
+
 
 }
 
@@ -184,7 +194,7 @@
                                           NSLog(@"%@", [result objectForKey:@"email"]);
 
                                           //
-                                          [self showMainCaheView];
+                                          [self showAgreementView];
                                           
                                          /*
                                           // Get the user's profile picture.
@@ -275,6 +285,14 @@
 
 
 ////
+-(void)showAgreementView{
+    NSLog(@"showAgreementView");
+    
+    AgreementView *myS = [self.storyboard instantiateViewControllerWithIdentifier:@"AgreementView"];
+    [self.navigationController pushViewController:myS animated:NO];
+}
+
+
 -(void)showMainCaheView{
     NSLog(@"showLoginCaheView");
     

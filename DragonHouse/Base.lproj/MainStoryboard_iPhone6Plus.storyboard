@@ -32,6 +32,56 @@
             </objects>
             <point key="canvasLocation" x="517" y="-857"/>
         </scene>
+        <!--Agreement View-->
+        <scene sceneID="Uoi-wN-DLJ">
+            <objects>
+                <viewController storyboardIdentifier="AgreementView" id="j5y-2h-dGd" customClass="AgreementView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y2i-g5-aW1"/>
+                        <viewControllerLayoutGuide type="bottom" id="eZ2-sa-hOn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wo0-He-iqX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Frf-Gu-vGm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFW-3e-f6i">
+                                <rect key="frame" x="0.0" y="621" width="414" height="57"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmL-l5-nNn">
+                                        <rect key="frame" x="350" y="18" width="16" height="22"/>
+                                        <state key="normal" image="checkbox.png"/>
+                                        <state key="selected" image="checkbox-pressed.png"/>
+                                        <state key="highlighted" image="checkbox-pressed.png"/>
+                                        <state key="focused" image="checkbox-pressed.png"/>
+                                        <connections>
+                                            <action selector="checkboxButton:" destination="j5y-2h-dGd" eventType="touchUpInside" id="SXX-75-9Cy"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="약관에 동의 하시겠습니까?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj4-6E-dty">
+                                        <rect key="frame" x="183" y="14" width="152" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="checkbox" destination="ZmL-l5-nNn" id="nXk-ux-yyL"/>
+                        <outlet property="webView" destination="Frf-Gu-vGm" id="qyo-4a-EyX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0d-e2-W2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517" y="-13"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -122,6 +172,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkbox-pressed.png" width="16" height="16"/>
+        <image name="checkbox.png" width="16" height="16"/>
         <image name="img_reg_facebook_button.png" width="720" height="116"/>
         <image name="img_reg_kakao_button.png" width="720" height="118"/>
         <image name="img_reg_naver_button.png" width="729" height="158"/>

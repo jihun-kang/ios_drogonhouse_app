@@ -37,6 +37,14 @@
 		E321D9B41CC145AE008D4D0D /* win_16.png in Resources */ = {isa = PBXBuildFile; fileRef = E321D9A41CC145AE008D4D0D /* win_16.png */; };
 		E34CF5851CF0150900713869 /* libNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34CF5801CF0150900713869 /* libNaverLogin.a */; };
 		E34CF5861CF0150900713869 /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E34CF5841CF0150900713869 /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */; };
+		E34CF5891CF03DF300713869 /* AgreementView.m in Sources */ = {isa = PBXBuildFile; fileRef = E34CF5881CF03DF300713869 /* AgreementView.m */; };
+		E34CF58C1CF0409100713869 /* returnPolicyEng.html in Resources */ = {isa = PBXBuildFile; fileRef = E34CF58B1CF0409100713869 /* returnPolicyEng.html */; };
+		E34CF58E1CF0436200713869 /* top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E34CF58D1CF0436200713869 /* top_bg.png */; };
+		E34CF5901CF0441D00713869 /* ico_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E34CF58F1CF0441D00713869 /* ico_logo.png */; };
+		E34CF5921CF0460600713869 /* ico_back.png in Resources */ = {isa = PBXBuildFile; fileRef = E34CF5911CF0460600713869 /* ico_back.png */; };
+		E34CF5961CF04A9A00713869 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = E34CF5931CF04A9A00713869 /* checkbox.png */; };
+		E34CF5971CF04A9A00713869 /* checkbox-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E34CF5941CF04A9A00713869 /* checkbox-pressed.png */; };
+		E34CF5981CF04A9A00713869 /* checkbox-checked.png in Resources */ = {isa = PBXBuildFile; fileRef = E34CF5951CF04A9A00713869 /* checkbox-checked.png */; };
 		E3A2DCFC1CC8593800BBC283 /* img_reg_facebook_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A2DCF91CC8593800BBC283 /* img_reg_facebook_button.png */; };
 		E3A2DCFD1CC8593800BBC283 /* img_reg_kakao_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A2DCFA1CC8593800BBC283 /* img_reg_kakao_button.png */; };
 		E3A2DCFE1CC8593800BBC283 /* img_reg_naver_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A2DCFB1CC8593800BBC283 /* img_reg_naver_button.png */; };
@@ -107,6 +115,15 @@
 		E34CF5821CF0150900713869 /* NaverThirdPartyLoginConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaverThirdPartyLoginConnection.h; sourceTree = "<group>"; };
 		E34CF5831CF0150900713869 /* NLoginThirdPartyOAuth20InAppBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLoginThirdPartyOAuth20InAppBrowserViewController.h; sourceTree = "<group>"; };
 		E34CF5841CF0150900713869 /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLoginThirdPartyOAuth20InAppBrowserViewController.m; sourceTree = "<group>"; };
+		E34CF5871CF03DF300713869 /* AgreementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementView.h; sourceTree = "<group>"; };
+		E34CF5881CF03DF300713869 /* AgreementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementView.m; sourceTree = "<group>"; };
+		E34CF58B1CF0409100713869 /* returnPolicyEng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = returnPolicyEng.html; sourceTree = "<group>"; };
+		E34CF58D1CF0436200713869 /* top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_bg.png; sourceTree = "<group>"; };
+		E34CF58F1CF0441D00713869 /* ico_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_logo.png; sourceTree = "<group>"; };
+		E34CF5911CF0460600713869 /* ico_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_back.png; sourceTree = "<group>"; };
+		E34CF5931CF04A9A00713869 /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
+		E34CF5941CF04A9A00713869 /* checkbox-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-pressed.png"; sourceTree = "<group>"; };
+		E34CF5951CF04A9A00713869 /* checkbox-checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-checked.png"; sourceTree = "<group>"; };
 		E3A2DCF91CC8593800BBC283 /* img_reg_facebook_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_reg_facebook_button.png; sourceTree = "<group>"; };
 		E3A2DCFA1CC8593800BBC283 /* img_reg_kakao_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_reg_kakao_button.png; sourceTree = "<group>"; };
 		E3A2DCFB1CC8593800BBC283 /* img_reg_naver_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_reg_naver_button.png; sourceTree = "<group>"; };
@@ -218,6 +235,7 @@
 		E321D6881CC1114F008D4D0D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E34CF58A1CF0407F00713869 /* html */,
 				E321D9941CC1459F008D4D0D /* images */,
 				E321D9851CC131F3008D4D0D /* dragon_house_logo.png */,
 				E321D65E1CC107DE008D4D0D /* MainStoryboard_iPhone6Plus.storyboard */,
@@ -240,6 +258,12 @@
 		E321D9941CC1459F008D4D0D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E34CF5931CF04A9A00713869 /* checkbox.png */,
+				E34CF5941CF04A9A00713869 /* checkbox-pressed.png */,
+				E34CF5951CF04A9A00713869 /* checkbox-checked.png */,
+				E34CF5911CF0460600713869 /* ico_back.png */,
+				E34CF58F1CF0441D00713869 /* ico_logo.png */,
+				E34CF58D1CF0436200713869 /* top_bg.png */,
 				E3A2DCF91CC8593800BBC283 /* img_reg_facebook_button.png */,
 				E3A2DCFA1CC8593800BBC283 /* img_reg_kakao_button.png */,
 				E3A2DCFB1CC8593800BBC283 /* img_reg_naver_button.png */,
@@ -275,9 +299,19 @@
 			name = thirdPartyModule;
 			sourceTree = "<group>";
 		};
+		E34CF58A1CF0407F00713869 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				E34CF58B1CF0409100713869 /* returnPolicyEng.html */,
+			);
+			name = html;
+			sourceTree = "<group>";
+		};
 		E3A2DCF81CC8586B00BBC283 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E34CF5871CF03DF300713869 /* AgreementView.h */,
+				E34CF5881CF03DF300713869 /* AgreementView.m */,
 				E3A2DCFF1CC8597B00BBC283 /* LoginViewController.h */,
 				E3A2DD001CC8597B00BBC283 /* LoginViewController.m */,
 			);
@@ -389,12 +423,16 @@
 			files = (
 				E321D9AB1CC145AE008D4D0D /* win_7.png in Resources */,
 				E321D9861CC131F3008D4D0D /* dragon_house_logo.png in Resources */,
+				E34CF5981CF04A9A00713869 /* checkbox-checked.png in Resources */,
 				E3A2DCFE1CC8593800BBC283 /* img_reg_naver_button.png in Resources */,
 				E321D9A81CC145AE008D4D0D /* win_4.png in Resources */,
 				E321D9B11CC145AE008D4D0D /* win_13.png in Resources */,
+				E34CF58C1CF0409100713869 /* returnPolicyEng.html in Resources */,
 				E3A2DCFC1CC8593800BBC283 /* img_reg_facebook_button.png in Resources */,
+				E34CF5971CF04A9A00713869 /* checkbox-pressed.png in Resources */,
 				E321D9AD1CC145AE008D4D0D /* win_9.png in Resources */,
 				E321D9AC1CC145AE008D4D0D /* win_8.png in Resources */,
+				E34CF5921CF0460600713869 /* ico_back.png in Resources */,
 				E321D6621CC107DE008D4D0D /* Assets.xcassets in Resources */,
 				E321D9A71CC145AE008D4D0D /* win_3.png in Resources */,
 				E321D9801CC11D09008D4D0D /* MainStoryboard_iPhone5.storyboard in Resources */,
@@ -404,6 +442,8 @@
 				E321D9B01CC145AE008D4D0D /* win_12.png in Resources */,
 				E3A2DCFD1CC8593800BBC283 /* img_reg_kakao_button.png in Resources */,
 				E321D9AE1CC145AE008D4D0D /* win_10.png in Resources */,
+				E34CF5901CF0441D00713869 /* ico_logo.png in Resources */,
+				E34CF5961CF04A9A00713869 /* checkbox.png in Resources */,
 				E321D9B31CC145AE008D4D0D /* win_15.png in Resources */,
 				E321D9A61CC145AE008D4D0D /* win_2.png in Resources */,
 				E321D6601CC107DE008D4D0D /* MainStoryboard_iPhone6Plus.storyboard in Resources */,
@@ -412,6 +452,7 @@
 				E321D9B41CC145AE008D4D0D /* win_16.png in Resources */,
 				E321D9841CC11D2C008D4D0D /* MainStoryboard_iPad.storyboard in Resources */,
 				E321D9B21CC145AE008D4D0D /* win_14.png in Resources */,
+				E34CF58E1CF0436200713869 /* top_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +481,7 @@
 				E3F8A75A1CC28CA800AFFB62 /* MainViewController.m in Sources */,
 				E3A2DD011CC8597B00BBC283 /* LoginViewController.m in Sources */,
 				E321D65D1CC107DE008D4D0D /* ViewController.m in Sources */,
+				E34CF5891CF03DF300713869 /* AgreementView.m in Sources */,
 				E321D65A1CC107DE008D4D0D /* AppDelegate.m in Sources */,
 				E321D6571CC107DE008D4D0D /* main.m in Sources */,
 				E34CF5861CF0150900713869 /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */,
