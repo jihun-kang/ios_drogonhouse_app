@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E31BCEBB1CFA0EE70032E5EA /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31BCEBA1CFA0EE70032E5EA /* HelpViewController.m */; };
+		E31BCEC01CFA11F00032E5EA /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = E31BCEBC1CFA11F00032E5EA /* page1.png */; };
+		E31BCEC11CFA11F00032E5EA /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = E31BCEBD1CFA11F00032E5EA /* page2.png */; };
+		E31BCEC21CFA11F00032E5EA /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = E31BCEBE1CFA11F00032E5EA /* page3.png */; };
+		E31BCEC31CFA11F00032E5EA /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = E31BCEBF1CFA11F00032E5EA /* page4.png */; };
+		E31BCEC61CFA12470032E5EA /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31BCEC51CFA12470032E5EA /* PageContentViewController.m */; };
 		E321D6571CC107DE008D4D0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D6561CC107DE008D4D0D /* main.m */; };
 		E321D65A1CC107DE008D4D0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D6591CC107DE008D4D0D /* AppDelegate.m */; };
 		E321D65D1CC107DE008D4D0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E321D65C1CC107DE008D4D0D /* ViewController.m */; };
@@ -72,6 +78,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E31BCEB91CFA0EE70032E5EA /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		E31BCEBA1CFA0EE70032E5EA /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		E31BCEBC1CFA11F00032E5EA /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
+		E31BCEBD1CFA11F00032E5EA /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
+		E31BCEBE1CFA11F00032E5EA /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
+		E31BCEBF1CFA11F00032E5EA /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
+		E31BCEC41CFA12470032E5EA /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		E31BCEC51CFA12470032E5EA /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		E321D6521CC107DE008D4D0D /* DragonHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321D6561CC107DE008D4D0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E321D6581CC107DE008D4D0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -258,6 +272,10 @@
 		E321D9941CC1459F008D4D0D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E31BCEBC1CFA11F00032E5EA /* page1.png */,
+				E31BCEBD1CFA11F00032E5EA /* page2.png */,
+				E31BCEBE1CFA11F00032E5EA /* page3.png */,
+				E31BCEBF1CFA11F00032E5EA /* page4.png */,
 				E34CF5931CF04A9A00713869 /* checkbox.png */,
 				E34CF5941CF04A9A00713869 /* checkbox-pressed.png */,
 				E34CF5951CF04A9A00713869 /* checkbox-checked.png */,
@@ -310,10 +328,14 @@
 		E3A2DCF81CC8586B00BBC283 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E31BCEC41CFA12470032E5EA /* PageContentViewController.h */,
+				E31BCEC51CFA12470032E5EA /* PageContentViewController.m */,
 				E34CF5871CF03DF300713869 /* AgreementView.h */,
 				E34CF5881CF03DF300713869 /* AgreementView.m */,
 				E3A2DCFF1CC8597B00BBC283 /* LoginViewController.h */,
 				E3A2DD001CC8597B00BBC283 /* LoginViewController.m */,
+				E31BCEB91CFA0EE70032E5EA /* HelpViewController.h */,
+				E31BCEBA1CFA0EE70032E5EA /* HelpViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -426,6 +448,7 @@
 				E34CF5981CF04A9A00713869 /* checkbox-checked.png in Resources */,
 				E3A2DCFE1CC8593800BBC283 /* img_reg_naver_button.png in Resources */,
 				E321D9A81CC145AE008D4D0D /* win_4.png in Resources */,
+				E31BCEC31CFA11F00032E5EA /* page4.png in Resources */,
 				E321D9B11CC145AE008D4D0D /* win_13.png in Resources */,
 				E34CF58C1CF0409100713869 /* returnPolicyEng.html in Resources */,
 				E3A2DCFC1CC8593800BBC283 /* img_reg_facebook_button.png in Resources */,
@@ -435,6 +458,7 @@
 				E34CF5921CF0460600713869 /* ico_back.png in Resources */,
 				E321D6621CC107DE008D4D0D /* Assets.xcassets in Resources */,
 				E321D9A71CC145AE008D4D0D /* win_3.png in Resources */,
+				E31BCEC01CFA11F00032E5EA /* page1.png in Resources */,
 				E321D9801CC11D09008D4D0D /* MainStoryboard_iPhone5.storyboard in Resources */,
 				E321D9821CC11D1A008D4D0D /* MainStoryboard_iPhone6.storyboard in Resources */,
 				E321D9A91CC145AE008D4D0D /* win_5.png in Resources */,
@@ -445,7 +469,9 @@
 				E34CF5901CF0441D00713869 /* ico_logo.png in Resources */,
 				E34CF5961CF04A9A00713869 /* checkbox.png in Resources */,
 				E321D9B31CC145AE008D4D0D /* win_15.png in Resources */,
+				E31BCEC11CFA11F00032E5EA /* page2.png in Resources */,
 				E321D9A61CC145AE008D4D0D /* win_2.png in Resources */,
+				E31BCEC21CFA11F00032E5EA /* page3.png in Resources */,
 				E321D6601CC107DE008D4D0D /* MainStoryboard_iPhone6Plus.storyboard in Resources */,
 				E321D9A51CC145AE008D4D0D /* win_1.png in Resources */,
 				E321D9AA1CC145AE008D4D0D /* win_6.png in Resources */,
@@ -484,6 +510,8 @@
 				E34CF5891CF03DF300713869 /* AgreementView.m in Sources */,
 				E321D65A1CC107DE008D4D0D /* AppDelegate.m in Sources */,
 				E321D6571CC107DE008D4D0D /* main.m in Sources */,
+				E31BCEC61CFA12470032E5EA /* PageContentViewController.m in Sources */,
+				E31BCEBB1CFA0EE70032E5EA /* HelpViewController.m in Sources */,
 				E34CF5861CF0150900713869 /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

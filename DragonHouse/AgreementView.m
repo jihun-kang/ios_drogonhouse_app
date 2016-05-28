@@ -8,6 +8,7 @@
 
 #import "AgreementView.h"
 #import "MainViewController.h"
+#import "HelpViewController.h"
 
 @interface AgreementView ()
 
@@ -121,19 +122,35 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void)goNext{
+    
+    if (checkboxSelected == 1){
+        HelpViewController *myS = [self.storyboard instantiateViewControllerWithIdentifier:@"HelpViewController"];
+        [self.navigationController pushViewController:myS animated:NO];
+
+    }
+    else{
+        NSLog(@"goNext 222");
+    }
+    
+
 }
+
 
 - (IBAction)checkboxButton:(id)sender {
     if (checkboxSelected == 0){
         [self.checkbox setSelected:YES];
         checkboxSelected = 1;
+        
     } else {
         [self.checkbox setSelected:NO];
         checkboxSelected = 0;
     }
 
+}
+
+- (IBAction)goNextPage:(id)sender {
+    [self goNext];
 }
 @end

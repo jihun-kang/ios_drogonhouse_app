@@ -15,8 +15,10 @@
 //@property (weak, nonatomic) IBOutlet UIButton *backButton;
 //-(IBAction)handleBack:(id)sender;
 - (IBAction)checkboxButton:(id)sender;
+- (IBAction)goNextPage:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *checkbox;
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @end
 

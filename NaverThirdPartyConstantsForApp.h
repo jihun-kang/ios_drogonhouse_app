@@ -32,8 +32,13 @@ typedef enum {
     OK
 } OAuthLoginState;
 
+//설정>로그인 API서비스 환경/URL Scheme에 내용
 #define kServiceAppUrlScheme    @"a2big"
 
+//개요>Client ID
 #define kConsumerKey            @"Wz7rfYEB7TDluNntWx_8"
+
+//개요>Client Secret
 #define kConsumerSecret         @"JsmnJWOZPI"
+
 #define kServiceAppName         @"네이버 아이디로 로그인"
